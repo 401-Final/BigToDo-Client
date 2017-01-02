@@ -1,7 +1,7 @@
 {
-  "name": "401-todoapp",
+  "name": "BigToDo-Client",
   "version": "1.0.0",
-  "description": "",
+  "description": "Client-side app for BigToDo",
   "main": "main.js",
   "directories": {
     "test": "test"
