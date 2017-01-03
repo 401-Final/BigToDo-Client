@@ -34,7 +34,7 @@ const app = angular.module('myApp', [
   dialog
 ]);
 
-// app.value('apiUrl', 'https://pet-store-401.herokuapp.com/api');
+app.value('apiUrl', 'http://localhost:3000/api');
 
 app.config(http);
 app.config(routes);
