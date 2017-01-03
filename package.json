@@ -1,5 +1,5 @@
 {
-  "name": "BigToDo-Client",
+  "name": "big-todo-client",
   "version": "1.0.0",
   "description": "Client-side app for BigToDo",
   "main": "main.js",
