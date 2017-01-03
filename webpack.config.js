@@ -8,7 +8,7 @@ module.exports = {
   target: 'web', 
   entry: './src/main.js',
   output: {
-    path: '../server/public',
+    path: '../BigToDo/public',
     filename: 'main.js'
   },
   devtool: 'source-map',
