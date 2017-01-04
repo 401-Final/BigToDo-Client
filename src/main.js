@@ -18,6 +18,11 @@ import dialog from 'ng-dialog';
 import 'ng-dialog/css/ngDialog.css';
 import 'ng-dialog/css/ngDialog-theme-default.css';
 
+import ngMaterial from 'angular-material';
+import 'angular-material/angular-material.min.css';
+import 'angular-material/layouts/angular-material.layouts.min.css';
+import 'angular-aria';
+
 // route, http config and auth setup
 import http from './http';
 import routes from './routes';
@@ -31,6 +36,7 @@ const app = angular.module('myApp', [
   angular.module('ui.router.state.events').name,
   defaultRoute,
   resource,
+  ngMaterial,
   dialog
 ]);
 
