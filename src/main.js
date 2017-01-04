@@ -34,7 +34,7 @@ const app = angular.module('myApp', [
   dialog
 ]);
 
-app.value('apiUrl', 'http://localhost:3000/api');
+app.value('apiUrl', process.env.APIURL || 'http://localhost:3000/api');
 
 app.config(http);
 app.config(routes);

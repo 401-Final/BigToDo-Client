@@ -12,7 +12,7 @@
     "test": "exit 0",
     "test:watch": "karma start",
     "start": "webpack-dev-server --inline",
-    "build": "webpack",
+    "build": "webpack  --define process.env.APIURL='\"/api\"'",
     "update-webdriver": "webdriver-manager update",
     "e2e": "protractor",
     "e2e-explore": "protractor --elementExplorer"
