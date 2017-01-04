@@ -14,12 +14,12 @@ export default function projectsService($http, apiUrl) {
       return $http.get(`${apiUrl}/projects/${projectId}`)
         .then(res => res.data);
     },
-    addProject(project) {
-      return $http.post(`${apiUrl}/projects`, project)
+    addProject(projectData) {
+      return $http.post(`${apiUrl}/projects`, projectData)
         .then(res => res.data);
     },
-    editProject(projectId, project) {
-      return $http.put(`${apiUrl}/projects/${projectId}`, project)
+    editProject(projectId, projectData) {
+      return $http.put(`${apiUrl}/projects/${projectId}`, projectData)
         .then(res => res.data);
     },
     deleteProject(projectId) {

@@ -6,16 +6,16 @@ export default function contextsService($http, apiUrl) {
       return $http.get(`${apiUrl}/contexts`)
         .then(res => res.data);
     },
-    getOneContext(contextId) {
+    getContextById(contextId) {
       return $http.get(`${apiUrl}/contexts/${contextId}`)
         .then(res => res.data);
     },
-    addContext(context) {
-      return $http.post(`${apiUrl}/contexts`, context)
+    addContext(contextData) {
+      return $http.post(`${apiUrl}/contexts`, contextData)
         .then(res => res.data);
     },
-    editContext(contextId, context) {
-      return $http.put(`${apiUrl}/contexts/${contextId}`, context)
+    editContext(contextId, contextData) {
+      return $http.put(`${apiUrl}/contexts/${contextId}`, contextData)
         .then(res => res.data);
     },
     deleteContext(contextId) {
