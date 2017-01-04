@@ -6,5 +6,5 @@ export default function usersService($http, apiUrl) {
       return $http.put(`${apiUrl}/users/${userId}`, userData)
         .then(res => res.data);
     }
-  }
+  };
 }
