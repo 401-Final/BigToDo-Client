@@ -1,5 +1,5 @@
 import template from './tasks.html';
-// import styles from './tasks.scss';
+import styles from './tasks.scss';
 
 export default {
   template,
