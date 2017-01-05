@@ -1,10 +1,15 @@
 <main>
-		<nav>
-        <!--<a ng-if="$ctrl.isAuthenticated()" ui-sref="stores" ng-click="$ctrl.logout()">logout</a>-->
-				<hr>
+  <nav>
+
+    <md-nav-bar>
+    <md-nav-item md-nav-sref="tasks">Tasks</md-nav-item>
+    <md-nav-item md-nav-sref="projects">Projects</md-nav-item>
+    <md-nav-item md-nav-sref="plan">Plan</md-nav-item>
+    <md-nav-item md-nav-sref="do">Do</md-nav-item>
+    <md-nav-item md-nav-sref="contexts">Contexts</md-nav-item>
+    <!--<md-nav-item mdNavClick="$ctrl.logout()">Logout</md-nav-item>  NO WORKY-->
+    <a ng-if="$ctrl.isAuthenticated()" ui-sref="tasks" ng-click="$ctrl.logout()">logout</a>
+    </md-nav-bar>
     </nav>
-	<ui-view></ui-view> 
+  <ui-view></ui-view> 
 </main>
-
-
-
