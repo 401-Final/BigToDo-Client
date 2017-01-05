@@ -2,11 +2,17 @@ import template from './tasks.html';
 // import styles from './tasks.scss';
 
 export default {
-  template
-  // controller
+  template,
+  bindings: {
+    tasks: '<',
+  },
+  controller
 };
 
-// controller.$inject = ['taskservice', '$state'];
-// function controller(tasks, $state) {
-  
-// };
+controller.$inject = ['tasksService'];
+function controller(tasksService) {
+
+  this.$onInit = () => {
+  	this.tasks = tasks;
+  };
+};
