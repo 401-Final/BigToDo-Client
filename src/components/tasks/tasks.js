@@ -3,12 +3,16 @@ import template from './tasks.html';
 
 export default {
   template,
+  bindings: {
+    tasks: '<',
+  },
   controller
-  
 };
 
 controller.$inject = ['tasksService'];
 function controller(tasksService) {
-  this.tasks = tasksService.getAllTasks();
 
+  this.$onInit = () => {
+  	this.tasks = tasks;
+  };
 };
