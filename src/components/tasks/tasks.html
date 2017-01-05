@@ -2,8 +2,8 @@
 		<h2>Tasks</h2>
 		<ul>
 			<li ng-repeat="task in $ctrl.tasks">
-				{{task.description}}
-	</li>
+				<span>{{task.description}} | {{task.duedate}}</span>
+			</li>
 	</ul>
 	<add fields="description, duedate" add="$ctrl.add"></add>
 </section>
