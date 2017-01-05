@@ -6,7 +6,12 @@
 			ng-options="context._id as context.name for context in $ctrl.contexts"
 			>
 			<option value="">TASK CONTEXTS</option>
+
 		</select>
-		<ui-view></ui-view>
+
+		<ul>
+			<li ng-repeat="task in $ctrl.tasks"> {{task.description}} </li>
+		</ul>
+
 	<add fields="name" add="$ctrl.add"></add>
 </section>
