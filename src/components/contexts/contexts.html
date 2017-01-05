@@ -1,9 +1,12 @@
 <section>
 		<h2>Contexts</h2>
-		<ul>
-			<li ng-repeat="context in $ctrl.contexts">
-				{{context.name}}
-	</li>
-	</ul>
+		<select
+			ng-model="$ctrl.selected"
+			ng-change="$ctrl.toContext(event)"
+			ng-options="context._id as context.name for context in $ctrl.contexts"
+			>
+			<option value="">TASK CONTEXTS</option>
+		</select>
+		<ui-view></ui-view>
 	<add fields="name" add="$ctrl.add"></add>
 </section>
