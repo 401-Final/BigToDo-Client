@@ -1,9 +1,11 @@
 <section>
   <form ng-submit="$ctrl.submit()">
-    <div ng-repeat="field in $ctrl.fields">
-      <label>{{field.toUpperCase()}}</label>
-      <input type="text" ng-model="$ctrl.item[field]">
-    </div>
+    <table>
+    <tr ng-repeat="field in $ctrl.fields">
+      <td><label>{{field.toUpperCase()}}</label></td>
+      <td><input type="text" ng-model="$ctrl.item[field]"></td>
+    </tr>
+    </table>
     <button>Add</button>
   </form>
 </section>

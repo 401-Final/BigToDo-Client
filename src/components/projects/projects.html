@@ -5,17 +5,18 @@
     <md-option ng-value="project" ng-repeat="project in $ctrl.projects">{{ project.description }}</md-option>
   </md-select>
 </md-input-container>-->
-	<ul>
-		<li ng-repeat="project in $ctrl.projects">
-				{{project.description}} | {{project.parentId.description}}
-		</li>
-	</ul>
+	<table>
+    <tr><th>Description</th><th>Parent Project</th></tr>
+		<tr ng-repeat="project in $ctrl.projects">
+        <td>{{project.description}}</td><td>{{project.parentId.description}}</td>
+		</tr>
+	</table>
 	<!--<div>
 		<div ng-repeat="project in $ctrl.projects">
 			{{project.description | project.duedate}}
 		</div>
 	</div>-->
-  <add fields="description, duedate" add="$ctrl.add"></add><hr>
+  <add fields="description,duedate" add="$ctrl.add"></add><hr>
 </section>
 
 
