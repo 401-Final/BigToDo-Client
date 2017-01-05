@@ -43,7 +43,16 @@ export default function routes($stateProvider, $urlRouterProvider) {
 
   $stateProvider.state({
     name: 'plan',
-    url: '/plan'
+    url: '/plan',
+    component: 'plan',
+    resolve: {
+      projects: ['projectsService', projectsService => {
+        return projectsService.getAllProjects();
+      }],
+      tasks: ['tasksService', tasksService => {
+        return tasksService.getAllTasks();
+      }]
+    }
   });
 
   $stateProvider.state({

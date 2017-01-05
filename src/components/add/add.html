@@ -1,7 +1,7 @@
 <section>
   <form ng-submit="$ctrl.submit()">
     <div ng-repeat="field in $ctrl.fields">
-      <label>{{field}}</label>
+      <label>{{field.toUpperCase()}}</label>
       <input type="text" ng-model="$ctrl.item[field]">
     </div>
     <button>Add</button>

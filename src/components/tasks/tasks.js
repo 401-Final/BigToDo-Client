@@ -12,9 +12,12 @@ export default {
 controller.$inject = ['tasksService'];
 function controller(tasksService) {
 
-  this.$onInit = () => {
-    
-  }
+  tasksService.getAllTasks()
+    .then(tasks => {
+      this.tasks = tasks;
+    });
+
+  console.log('this tasks', this.tasks);
 
   this.add = task => {
     console.log('frontend task', task);

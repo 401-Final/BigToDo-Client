@@ -16,6 +16,7 @@ function controller(projectsService) {
   projectsService.getAllProjects()
     .then(projects => {
       this.projects = projects;
+      console.log(this.projects);
     });
 
   this.add = project => {
