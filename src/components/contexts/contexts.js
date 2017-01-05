@@ -5,6 +5,7 @@ export default {
   template,
   bindings: {
     contexts: '<',
+    selected: '<'
   },
   controller
 };
@@ -24,5 +25,9 @@ function controller(contextsService) {
       .then(context => {
         this.contexts.push(context);
       });
+  };
+
+  this.toContext = context => {
+    console.log('context selected: ', context);
   };
 };
