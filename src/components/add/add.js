@@ -12,7 +12,7 @@ export default {
 function controller() {
 
   this.$onInit = () => {
-    this.fields = this._fields.split(',');
+    this.fields = this._fields.replace(/ /g, '').split(',');
   };
 
   this.reset = () => {
