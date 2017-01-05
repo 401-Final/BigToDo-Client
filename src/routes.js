@@ -8,6 +8,17 @@ export default function routes($stateProvider, $urlRouterProvider) {
     component: 'welcome'
   });
 
+		  $stateProvider.state({
+    name: 'tasks',
+    url: '/tasks',
+    component: 'tasks',
+    resolve: {
+      tasks: ['tasksService', tasksService => {
+        return tasksService.getAllTasks();
+      }]
+    },
+  });
+
   $urlRouterProvider.otherwise('/');
     
 }
