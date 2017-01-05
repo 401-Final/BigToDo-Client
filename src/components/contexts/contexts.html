@@ -1,18 +1,20 @@
 <section>
-	<h2>Contexts</h2>
-	<!--<ul>
-		<li ng-repeat="context in $ctrl.contexts track by context._id">
-			<div ng-hide="$ctrl.editor">{{context.name}}
-				<input type="text" ng-show="$ctrl.editor">
-				<span ng-click="$ctrl.edit(context)">EDIT
-					</span>
-				</div>
-		</li>
-	</ul>-->
-	<ul>
-		<li ng-repeat="context in $ctrl.contexts">
-			{{context.name}}
-		</li>
-	</ul>
+		<h2>Contexts</h2>
+		<md-input-container>
+			<select 
+				ng-model="$ctrl.selected"
+				ng-change="$ctrl.toContext(event)"
+				ng-options="context._id as context.name for context in $ctrl.contexts"
+				>
+				<option value="">TASK CONTEXTS</option>
+
+			</select>
+
+		</md-input-container>
+
+		<ul>
+			<li ng-repeat="task in $ctrl.tasks"> {{task.description}} </li>
+		</ul>
+
 	<add fields="name" add="$ctrl.add"></add>
 </section>
