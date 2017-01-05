@@ -2,11 +2,14 @@ import template from './projects.html';
 // import styles from './projects.scss';
 
 export default {
-  template
-  // controller
+  template,
+  bindings: {
+    projects: '<',
+  },
+  controller
 };
 
-// controller.$inject = ['projectservice', '$state'];
-// function controller(projects, $state) {
-  
-// };
+controller.$inject = ['projectsService'];
+function controller(projectsService) {
+
+};

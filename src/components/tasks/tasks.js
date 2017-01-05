@@ -12,7 +12,4 @@ export default {
 controller.$inject = ['tasksService'];
 function controller(tasksService) {
 
-  this.$onInit = () => {
-  	this.tasks = tasks;
-  };
 };
