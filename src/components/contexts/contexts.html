@@ -1,9 +1,18 @@
 <section>
-		<h2>Contexts</h2>
-		<ul>
-			<li ng-repeat="context in $ctrl.contexts">
-				{{context.name}}
-	</li>
+	<h2>Contexts</h2>
+	<!--<ul>
+		<li ng-repeat="context in $ctrl.contexts track by context._id">
+			<div ng-hide="$ctrl.editor">{{context.name}}
+				<input type="text" ng-show="$ctrl.editor">
+				<span ng-click="$ctrl.edit(context)">EDIT
+					</span>
+				</div>
+		</li>
+	</ul>-->
+	<ul>
+		<li ng-repeat="context in $ctrl.contexts">
+			{{context.name}}
+		</li>
 	</ul>
 	<add fields="name" add="$ctrl.add"></add>
 </section>

@@ -3,6 +3,7 @@
 		<ul>
 			<li ng-repeat="task in $ctrl.tasks">
 				<span>{{task.description}} | {{task.duedate}}</span>
+				<input type="checkbox">
 			</li>
 	</ul>
 	<add fields="description, duedate" add="$ctrl.add"></add>
