@@ -41,6 +41,16 @@ export default function routes($stateProvider, $urlRouterProvider) {
     },
   });
 
+  $stateProvider.state({
+    name: 'plan',
+    url: '/plan'
+  });
+
+  $stateProvider.state({
+    name: 'do',
+    url: '/do'
+  });
+
   $urlRouterProvider.otherwise('/');
     
 }
