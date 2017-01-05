@@ -10,6 +10,19 @@ export default {
 };
 
 controller.$inject = ['projectsService'];
+
 function controller(projectsService) {
+
+  projectsService.getAllProjects()
+    .then(projects => {
+      this.projects = projects;
+    });
+
+  this.add = project => {
+    projectsService.addProject(project)
+      .then(project => {
+        this.projects.push(project);
+      });
+  };
 
 };
