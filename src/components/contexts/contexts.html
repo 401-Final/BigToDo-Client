@@ -1,13 +1,16 @@
 <section>
 		<h2>Contexts</h2>
-		<select
-			ng-model="$ctrl.selected"
-			ng-change="$ctrl.toContext(event)"
-			ng-options="context._id as context.name for context in $ctrl.contexts"
-			>
-			<option value="">TASK CONTEXTS</option>
+		<md-input-container>
+			<select 
+				ng-model="$ctrl.selected"
+				ng-change="$ctrl.toContext(event)"
+				ng-options="context._id as context.name for context in $ctrl.contexts"
+				>
+				<option value="">TASK CONTEXTS</option>
 
-		</select>
+			</select>
+
+		</md-input-container>
 
 		<ul>
 			<li ng-repeat="task in $ctrl.tasks"> {{task.description}} </li>
