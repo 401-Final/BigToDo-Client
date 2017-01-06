@@ -5,9 +5,13 @@ export default {
   controller
 };
 
-controller.$inject = ['userService'];
+controller.$inject = ['userService', '$state'];
 
-function controller(userService) {
-  this.logout = () => userService.logout();
+function controller(userService, $state) {
+  this.logout = () => {
+    userService.logout();
+    $state.go('welcome');
+  };
+
   this.isAuthenticated = () => userService.isAuthenticated();
 }

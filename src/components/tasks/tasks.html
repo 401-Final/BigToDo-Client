@@ -1,18 +1,5 @@
 <section>
-		<h2>Tasks</h2>
-    <table>
-      <tr><th>Task</th><th>Due Date</th><th>Completed?</th></tr>
-      <tr ng-repeat="task in $ctrl.tasks">
-        <td>{{task.description}}</td>
-        <td>{{task.duedate}}</td>
-        <td><input type="checkbox"></td>
-      </tr>
-    </table>
-		<!--<ul>
-			<li ng-repeat="task in $ctrl.tasks">
-				<span>{{task.description}} | {{task.duedate}}</span>
-				<input type="checkbox">
-			</li>
-  	</ul>-->
-	<add fields="description,duedate,contextId" add="$ctrl.add"></add>
+	<h2>Tasks</h2>
+  <tasklist tasks="$ctrl.tasks"></tasklist>
+	<add fields="description,duedate" add="$ctrl.add"></add>
 </section>
