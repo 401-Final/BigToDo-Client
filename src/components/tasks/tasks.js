@@ -24,6 +24,7 @@ function controller(tasksService) {
   this.refresh();
 
   this.add = task => {
+    console.log('addtask', task);
     tasksService.addTask(task)
       .then(task => {
         this.tasks.push(task);
