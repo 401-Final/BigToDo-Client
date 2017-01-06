@@ -1,6 +1,9 @@
 .tasktable {
   margin: 0.5em;
+  border-collapse: collapse;
+
   td, th {
-    border: 1px solid black;
+    outline: thin solid black;
+    padding: 0.2em 0.5em;
   }
 }

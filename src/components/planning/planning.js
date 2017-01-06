@@ -18,6 +18,7 @@ function controller(tasksService, projectsService) {
 
   this.$onInit = () => {
     this.allProjects = this.projects;
+    console.log('allprojs', this.allProjects);
   };
 
   this.refreshTasks = () => {

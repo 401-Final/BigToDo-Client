@@ -1,5 +1,5 @@
 <section>
-  <h2>Planning</h2>
+  <h2 class="pagetitle">Planning</h2>
   <md-input-container>
     <md-select ng-model="$ctrl.projectSelect" ng-change="$ctrl.refreshLists()" placeholder="Select a Project">
       <md-option ng-value="project" ng-repeat="project in $ctrl.allProjects">{{ project.description }}</md-option>
