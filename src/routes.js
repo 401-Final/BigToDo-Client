@@ -15,6 +15,12 @@ export default function routes($stateProvider, $urlRouterProvider) {
     resolve: {
       tasks: ['tasksService', tasksService => {
         return tasksService.getAllTasks();
+      }],
+      contexts: ['contextsService', contextsService => {
+        return contextsService.getAllContexts();
+      }],
+      projects: ['projectsService', projectsService => {
+        return projectsService.getAllProjects();
       }]
     },
   });
@@ -58,7 +64,8 @@ export default function routes($stateProvider, $urlRouterProvider) {
   $stateProvider.state({
     name: 'do',
     url: '/doing',
-    component: 'doing'
+    component: 'doing',
+    
   });
 
   $stateProvider.state({
