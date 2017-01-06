@@ -1,16 +1,5 @@
 <section>
 		<h2>Contexts</h2>
-		<!--<md-input-container>
-			<select 
-				ng-model="$ctrl.selected"
-				ng-change="$ctrl.toContext(event)"
-				ng-options="context._id as context.name for context in $ctrl.contexts"
-				>
-				<option value="">TASK CONTEXTS</option>
-
-			</select>
-
-		</md-input-container>-->
 
 		<md-input-container>
 			<md-select ng-model="$ctrl.selected"
@@ -20,12 +9,9 @@
 				<md-option ng-value="context._id" ng-repeat="context in $ctrl.contexts">{{context.name}}</md-option>
 
 			</md-select>
-
 		</md-input-container>
 
-		<ul>
-			<li ng-repeat="task in $ctrl.tasks"> {{task.description}} </li>
-		</ul>
+		<tasklist tasks="$ctrl.tasks" ng-show="$ctrl.selected"></tasklist>
 
 	<add fields="name" add="$ctrl.add"></add>
 </section>
