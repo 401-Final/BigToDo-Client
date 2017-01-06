@@ -60,6 +60,12 @@ export default function routes($stateProvider, $urlRouterProvider) {
     url: '/do'
   });
 
+  $stateProvider.state({
+    name: 'about',
+    url: '/about',
+    component: 'about'
+  });
+
   $urlRouterProvider.otherwise('/');
     
 }
