@@ -12,6 +12,12 @@
       </md-select>
       <!--Selected Project Id = {{projectSelect._id}}-->
     </md-input-container>
+    <md-input-container ng-if="$ctrl.contexts">
+      <md-select ng-model="$ctrl.item.parentId" placeholder="Select an optional context">
+        <md-option ng-repeat="context in $ctrl.contexts" ng-value="context.name">{{context.name}}</md-option>
+      </md-select>
+      <!--Selected Project Id = {{projectSelect._id}}-->
+    </md-input-container>
     <button>Add</button>
     </form>
 </section>

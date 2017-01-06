@@ -5,7 +5,8 @@ export default {
   bindings: {
     _fields: '@fields',
     add: '<',
-    projects: '<'
+    projects: '<',
+    contexts: '<'
   },
   controller
 };
