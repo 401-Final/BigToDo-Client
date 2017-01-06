@@ -1,5 +1,5 @@
 <section>
-  <form class="addform" ng-submit="$ctrl.submit()">
+  <form class="addbox" ng-submit="$ctrl.submit()">
     <table>
     <tr ng-repeat="field in $ctrl.fields">
       <td><label>{{field.toUpperCase()}}</label></td>
@@ -13,7 +13,7 @@
       <!--Selected Project Id = {{projectSelect._id}}-->
     </md-input-container>
     <button>Add</button>
-    </form>
+  </form>
 </section>
 
 <!--ng-model="projectSelect"-->
