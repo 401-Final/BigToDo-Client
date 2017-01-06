@@ -57,7 +57,8 @@ export default function routes($stateProvider, $urlRouterProvider) {
 
   $stateProvider.state({
     name: 'do',
-    url: '/do'
+    url: '/doing',
+    component: 'doing'
   });
 
   $stateProvider.state({
