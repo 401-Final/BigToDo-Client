@@ -6,7 +6,8 @@
       <md-nav-item md-nav-sref="plan">Plan</md-nav-item>
       <md-nav-item md-nav-sref="do">Do</md-nav-item>
       <md-nav-item md-nav-sref="about">About</md-nav-item>
-      <md-nav-item md-nav-click="$ctrl.logout()">Logout</md-nav-item>
+      <md-nav-item ng-if="$ctrl.isAuthenticated()" md-nav-click="$ctrl.logout()">Logout</md-nav-item>
+      <md-nav-item ng-if="!$ctrl.isAuthenticated()" md-nav-click="$ctrl.login()">Login</md-nav-item>
     </md-nav-bar>
     </nav>
   <ui-view></ui-view> 
