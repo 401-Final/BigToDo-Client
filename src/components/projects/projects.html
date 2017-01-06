@@ -1,16 +1,11 @@
 <section>
-		<h2>Projects</h2>
+	<h2>Projects</h2>
+  <projectlist projects="$ctrl.projects"></projectlist>
   <!--<md-input-container>
   <md-select ng-model="projectSelect" placeholder="Select a Project">
     <md-option ng-value="project" ng-repeat="project in $ctrl.projects">{{ project.description }}</md-option>
   </md-select>
 </md-input-container>-->
-	<table>
-    <tr><th>Description</th><th>Parent Project</th></tr>
-		<tr ng-repeat="project in $ctrl.projects">
-        <td>{{project.description}}</td><td>{{project.parentId.description}}</td>
-		</tr>
-	</table>
 	<!--<div>
 		<div ng-repeat="project in $ctrl.projects">
 			{{project.description | project.duedate}}
