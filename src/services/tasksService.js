@@ -12,9 +12,7 @@ export default function tasksService($http, apiUrl) {
     },
     getTasksByContext(contextId) {      
       return $http.get(`${apiUrl}/tasks?contextId=${contextId}`)
-        .then(res => {
-          return res.data;
-        });
+        .then(res => res.data);
     },
     getTaskById(taskId) {
       return $http.get(`${apiUrl}/tasks/${taskId}`)
