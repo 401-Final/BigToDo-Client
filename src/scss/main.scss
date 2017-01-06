@@ -6,9 +6,23 @@ body, html {
 }
 
 h3 {
-    color: blue;
+  color: blue;
 }
 
 img {
 	 max-width: 90%;
+}
+
+h2 {
+  margin: 0.5em;
+}
+
+.pagetitle {
+  font-style: italic;
+}
+
+.sitelogo {
+  font-family: Baloo, sans-serif;
+  text-align: center;
+  color: maroon;
 }
