@@ -13,16 +13,20 @@ controller.$inject = ['projectsService'];
 
 function controller(projectsService) {
 
-  projectsService.getAllProjects()
-    .then(projects => {
-      this.projects = projects;
-      console.log(this.projects);
-    });
+  this.refresh = () => {
+    projectsService.getAllProjects()
+      .then(projects => {
+        this.projects = projects;
+      });
+  };
+ 
+  this.refresh();
 
   this.add = project => {
     projectsService.addProject(project)
       .then(project => {
         this.projects.push(project);
+        this.refresh();
       });
   };
 

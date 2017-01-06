@@ -4,7 +4,8 @@ export default {
   template,
   bindings: {
     _fields: '@fields',
-    add: '<'
+    add: '<',
+    projects: '<'
   },
   controller
 };
@@ -20,6 +21,7 @@ function controller() {
   };
 
   this.submit = () => {
+    // this.item.parentId = this.parentId;
     this.add(this.item);
     this.reset();
   };
