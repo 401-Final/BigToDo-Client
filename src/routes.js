@@ -43,8 +43,8 @@ export default function routes($stateProvider, $urlRouterProvider) {
 
   $stateProvider.state({
     name: 'plan',
-    url: '/plan',
-    component: 'plan',
+    url: '/planning',
+    component: 'planning',
     resolve: {
       projects: ['projectsService', projectsService => {
         return projectsService.getAllProjects();
