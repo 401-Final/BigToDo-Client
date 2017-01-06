@@ -1,17 +1,16 @@
-<!--<section>
-		<h2>Contexts</h2>
+<section>
+		<h2 class="pagetitle">Contexts</h2>
 		<md-input-container>
-			<md-select ng-model="$ctrl.contextSelect" placeholder="Select a Context" ng-change="$ctrl.refreshTasks()">
-				<md-option ng-value="context._id" ng-repeat="context in $ctrl.allContexts">{{context.name}}</md-option>
+			<md-select ng-model="$ctrl.context" placeholder="Select a Context" ng-change="$ctrl.refreshTasks()">
+				<md-option ng-value="context" ng-repeat="context in $ctrl.allContexts">{{context.name}}</md-option>
 			</md-select>
 		</md-input-container>
-		<tasklist tasks="$ctrl.tasks" ng-show="$ctrl.contextSelect"></tasklist>
+		<tasklist tasks="$ctrl.tasks" ng-show="$ctrl.context"></tasklist>
 	<add fields="name" add="$ctrl.add"></add>
-</section>-->
+</section>
 
 <section>
 		<h2 class="pagetitle">Contexts</h2>
-
 		<md-input-container>
 			<md-select ng-model="$ctrl.selected"
 				placeholder="Select a Context"
@@ -25,4 +24,4 @@
 		<tasklist tasks="$ctrl.tasks" ng-show="$ctrl.selected"></tasklist>
 
 	<add fields="name" add="$ctrl.add"></add>
-</section>
+</section>-->
