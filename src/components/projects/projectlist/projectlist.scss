@@ -1,7 +1,9 @@
 .projecttable {
   margin: 0.5em;
+  border-collapse: collapse;
   
-  tr, td, th {
-    border: 1px solid black;
+  td, th {
+    outline: thin solid black;
+    padding: 0.2em 0.5em;
   }
 }
