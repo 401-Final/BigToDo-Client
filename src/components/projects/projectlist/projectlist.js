@@ -1,4 +1,5 @@
 import template from './projectlist.html';
+import styles from './projectlist.scss';
 
 export default {
   template,
@@ -9,5 +10,7 @@ export default {
 };
 
 function controller() {
+
+  this.styles = styles;
   
 }

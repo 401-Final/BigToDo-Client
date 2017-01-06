@@ -1,5 +1,5 @@
 <section>
-		<h2>Contexts</h2>
+		<h2 class="pagetitle">Contexts</h2>
 		<md-input-container>
 			<md-select ng-model="$ctrl.context" placeholder="Select a Context" ng-change="$ctrl.refreshTasks()">
 				<md-option ng-value="context" ng-repeat="context in $ctrl.allContexts">{{context.name}}</md-option>
@@ -9,9 +9,8 @@
 	<add fields="name" add="$ctrl.add"></add>
 </section>
 
-<!--<section>
-		<h2>Contexts</h2>
-
+<section>
+		<h2 class="pagetitle">Contexts</h2>
 		<md-input-container>
 			<md-select ng-model="$ctrl.selected"
 				placeholder="Select a Context"
