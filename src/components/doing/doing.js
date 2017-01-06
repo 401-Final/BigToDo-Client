@@ -5,7 +5,8 @@ export default {
   template,
   bindings: {
     contexts: '<',
-    tasks: '<'
+    tasks: '<',
+    projects: '<'
   },
   controller
 

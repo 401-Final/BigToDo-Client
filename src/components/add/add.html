@@ -6,11 +6,20 @@
       <td><input type="text" ng-model="$ctrl.item[field]"></td>
     </tr>
     </table> 
-    <md-input-container ng-if="$ctrl.projects">
+    <md-input-container ng-if="!$ctrl.contexts">
       <md-select ng-model="$ctrl.item.parentId" placeholder="Select an optional parent project">
         <md-option ng-repeat="project in $ctrl.projects" ng-value="project.description">{{project.description}}</md-option>
       </md-select>
-      <!--Selected Project Id = {{projectSelect._id}}-->
+    </md-input-container>
+    <md-input-container ng-if="$ctrl.contexts">
+      <md-select ng-model="$ctrl.item.projectId" placeholder="Select an optional project">
+        <md-option ng-repeat="project in $ctrl.projects" ng-value="project.description">{{project.description}}</md-option>
+      </md-select>
+    </md-input-container>
+    <md-input-container ng-if="$ctrl.contexts">
+      <md-select ng-model="$ctrl.item.contextId" placeholder="Select an optional context">
+        <md-option ng-repeat="context in $ctrl.contexts" ng-value="context.name">{{context.name}}</md-option>
+      </md-select>
     </md-input-container>
     <button>Add</button>
     </form>

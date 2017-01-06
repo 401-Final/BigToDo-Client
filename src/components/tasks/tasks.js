@@ -5,6 +5,8 @@ export default {
   template,
   bindings: {
     tasks: '<',
+    projects: '<',
+    contexts: '<'
   },
   controller
 };
@@ -12,18 +14,20 @@ export default {
 controller.$inject = ['tasksService'];
 function controller(tasksService) {
 
-  tasksService.getAllTasks()
-    .then(tasks => {
-      this.tasks = tasks;
-    });
+  this.refresh = () => {
+    tasksService.getAllTasks()
+      .then(tasks => {
+        this.tasks = tasks;
+      });
+  };
 
-  console.log('this tasks', this.tasks);
+  this.refresh();
 
   this.add = task => {
-    console.log('frontend task', task);
     tasksService.addTask(task)
       .then(task => {
         this.tasks.push(task);
+        this.refresh();
       });
   };
 };
