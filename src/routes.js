@@ -2,7 +2,7 @@ routes.$inject = ['$stateProvider', '$urlRouterProvider'];
 
 export default function routes($stateProvider, $urlRouterProvider) {
 
-	  $stateProvider.state({
+  $stateProvider.state({
     name: 'welcome',
     url: '/',
     component: 'welcome'
@@ -36,16 +36,16 @@ export default function routes($stateProvider, $urlRouterProvider) {
     },
   });
 
-  $stateProvider.state({
-    name: 'contexts',
-    url: '/contexts',
-    component: 'contexts',
-    resolve: {
-      contexts: ['contextsService', contextsService => {
-        return contextsService.getAllContexts();
-      }]
-    },
-  });
+  // $stateProvider.state({
+  //   name: 'contexts',
+  //   url: '/contexts',
+  //   component: 'contexts',
+  //   resolve: {
+  //     contexts: ['contextsService', contextsService => {
+  //       return contextsService.getAllContexts();
+  //     }]
+  //   },
+  // });
 
   $stateProvider.state({
     name: 'plan',

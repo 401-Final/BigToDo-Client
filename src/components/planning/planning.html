@@ -5,6 +5,7 @@
       <md-option ng-value="project" ng-repeat="project in $ctrl.allProjects">{{ project.description }}</md-option>
     </md-select>
   </md-input-container>
+  <div>
   <span class="listbox">
     <h2>Tasks</h2>
     <tasklist tasks="$ctrl.tasks"></tasklist>
@@ -13,4 +14,5 @@
     <h2>Projects</h2>
     <projectlist projects="$ctrl.projects"></projectlist>
   </span>
+  </div>
 </section>
