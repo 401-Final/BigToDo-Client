@@ -1,4 +1,5 @@
 import template from './tasklist.html';
+import styles from './tasklist.scss';
 
 export default {
   template,
@@ -9,5 +10,7 @@ export default {
 };
 
 function controller() {
+
+  this.styles = styles;
 
 }

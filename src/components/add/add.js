@@ -1,16 +1,20 @@
 import template from './add.html';
+import styles from './add.scss';
 
 export default {
   template,
   bindings: {
     _fields: '@fields',
     add: '<',
-    projects: '<'
+    projects: '<',
+    contexts: '<'
   },
   controller
 };
 
 function controller() {
+
+  this.styles = styles;
 
   this.$onInit = () => {
     this.fields = this._fields.replace(/ /g, '').split(',');

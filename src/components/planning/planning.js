@@ -37,7 +37,7 @@ function controller(tasksService, projectsService) {
   this.refreshLists = () => {
     this.refreshProjects();
     this.refreshTasks();
-  }
+  };
 
   // this.refreshTasks();
 }
