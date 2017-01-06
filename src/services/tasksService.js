@@ -7,7 +7,7 @@ export default function tasksService($http, apiUrl) {
         .then(res => res.data);
     },
     getTasksByProject(projectId) {
-      return $http.get(`${apiUrl}/tasks?project=${projectId}`)
+      return $http.get(`${apiUrl}/tasks?projectId=${projectId}`)
         .then(res => res.data);
     },
     getTasksByContext(contextId) {      
