@@ -1,11 +1,12 @@
 @import 'buttons';
 
 body, html {
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: lightgrey;
+	font-family: Vollkorn, Arial, Helvetica, sans-serif;
+	background-color: lemonchiffon;
 }
 
-h3 {
+h2 {
+  font-family: Ubuntu, Arial, sans-serif;
   color: blue;
 }
 
@@ -13,7 +14,7 @@ img {
 	 max-width: 90%;
 }
 
-h2 {
+h2, h3, h4, p {
   margin: 0.5em;
 }
 
@@ -25,4 +26,7 @@ h2 {
   font-family: Baloo, sans-serif;
   text-align: center;
   color: maroon;
+}
+
+.banner {
 }
