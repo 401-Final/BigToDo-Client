@@ -14,6 +14,8 @@ controller.$inject = [ 'tasksService', 'projectsService' ];
 
 function controller(tasksService, projectsService) {
 
+  this.styles = styles;
+
   this.$onInit = () => {
     this.allProjects = this.projects;
   };
