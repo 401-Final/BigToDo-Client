@@ -14,13 +14,10 @@ export default {
 controller.$inject = ['tasksService'];
 function controller(tasksService) {
 
-
-
   this.refresh = () => {
     tasksService.getAllTasks()
       .then(tasks => {
         this.tasks = tasks;
-        console.log('tasks', this.tasks);
       });
   };
 
