@@ -1,0 +1,20 @@
+<section>
+  <form class="addform" ng-submit="$ctrl.submit()">
+    <table>
+    <tr ng-repeat="field in $ctrl.fields">
+      <td><label>{{field.toUpperCase()}}</label></td>
+      <td><input type="text" ng-model="$ctrl.item[field]"></td>
+    </tr>
+    </table> 
+    <md-input-container ng-if="$ctrl.projects">
+      <md-select ng-model="$ctrl.item.parentId" placeholder="Select an optional parent project">
+        <md-option ng-repeat="project in $ctrl.projects" ng-value="project.description">{{project.description}}</md-option>
+      </md-select>
+      <!--Selected Project Id = {{projectSelect._id}}-->
+    </md-input-container>
+    <button>Add</button>
+    </form>
+</section>
+
+<!--ng-model="projectSelect"-->
+

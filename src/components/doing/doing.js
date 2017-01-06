@@ -1,12 +1,11 @@
-import template from './contexts.html';
-// import styles from './contexts.scss';
+import template from './doing.html';
+import styles from './doing.scss';
 
 export default {
   template,
   bindings: {
     contexts: '<',
     tasks: '<'
-
   },
   controller
 
@@ -15,6 +14,8 @@ export default {
 controller.$inject = ['contextsService', 'tasksService'];
 
 function controller(contextsService, tasksService) {
+
+  this.styles = styles;
   
   contextsService.getAllContexts()
     .then(contexts => {

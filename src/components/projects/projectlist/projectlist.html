@@ -1,0 +1,6 @@
+	<table>
+    <tr><th>Description</th><th>Parent Project</th></tr>
+		<tr ng-repeat="project in $ctrl.projects">
+        <td>{{project.description}}</td><td>{{project.parentId.description}}</td>
+		</tr>
+	</table>
