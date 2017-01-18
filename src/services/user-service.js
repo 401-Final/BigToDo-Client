@@ -8,8 +8,8 @@ export default function userService(token, $http, apiUrl) {
   const current = token.get();
   if (current) {
     $http
-            .get(`${apiUrl}/auth/verify`)
-            .catch(() => token.remove());
+      .get(`${apiUrl}/auth/verify`)
+      .catch(() => token.remove());
   }
     
   function credential(endpoint) {

@@ -23,11 +23,9 @@ function controller(contextsService, tasksService) {
     });
 
   this.add = context => {
-    console.log('frontend context', context);
     contextsService.addContext(context)
       .then(context => {
         this.contexts.push(context);
-
       });
   };
 

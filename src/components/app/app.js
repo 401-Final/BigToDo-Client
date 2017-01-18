@@ -16,8 +16,6 @@ function controller(userService, loginService, $state) {
   
   this.login = () => {
     loginService.login();
-    // $state.go('login');
-
   };
 
   this.isAuthenticated = () => userService.isAuthenticated();

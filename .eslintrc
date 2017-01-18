@@ -4,12 +4,9 @@
  },
  "env": {
    "browser": true,
-   "jquery": true,
    "node": true,
    "es6": true,
-	 "mocha": true,
-	 "protractor": true,
-	 "jasmine": true
+	 "mocha": true // this covers mocha globals
  },
  "rules": {
    "semi": 1,
@@ -28,14 +25,6 @@
  },
  "parserOptions": {
         "sourceType": "module"
-    },
-   "globals": {
-   "describe": false,
-   "it": false,
-   "beforeEach": false,
-   "afterEach": false,
-   "before": false,
-   "after": false
- }
+    }
 
 }

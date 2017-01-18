@@ -13,6 +13,7 @@ export default function routes($stateProvider, $urlRouterProvider) {
     url: '/tasks',
     component: 'tasks',
     resolve: {
+      // the simplicity of implicit user-owned data :)
       tasks: ['tasksService', tasksService => {
         return tasksService.getAllTasks();
       }],
