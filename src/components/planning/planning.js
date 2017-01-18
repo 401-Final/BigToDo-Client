@@ -17,6 +17,7 @@ function controller(tasksService, projectsService) {
   this.styles = styles;
 
   this.$onInit = () => {
+    // Why not just use this.projects???
     this.allProjects = this.projects;
   };
 

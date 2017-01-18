@@ -2,18 +2,14 @@ auth.$inject = [ '$rootScope', 'userService', 'loginService', '$state' ];
 
 export default function auth($rootScope, userService, loginService, $state) {
     
-    // angular-ui-router puts this event ($stateChangeStart) on $rootScope
-  $rootScope.$on('$stateChangeStart', (event, toState, toParams /*, fromState, fromParams*/ ) => {
+  // angular-ui-router puts this event ($stateChangeStart) on $rootScope
+  $rootScope.$on('$stateChangeStart', (event, toState, toParams) => {
     
-        // console.log('$scs', toState, toParams, fromState, fromParams);
-
     if (!(toState.data && toState.data.public) && !userService.isAuthenticated()) {
-            // stop ui-router from making the state change        
+      // stop ui-router from making the state change        
       event.preventDefault();
-      loginService.login()
-      .then(() => {
-        $state.go(toState.name, toParams);
-        
+      loginService.login().then(() => {
+        $state.go(toState.name, toParams);  
       });            
     }
   });

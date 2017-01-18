@@ -1,32 +1,35 @@
 tasksService.$inject = ['$http', 'apiUrl'];
 
+// I think I would have shortened the method names on your services.
+// You already know its the "task" service
 export default function tasksService($http, apiUrl) {
   return {
-    getAllTasks() {
+    getAll() {
       return $http.get(`${apiUrl}/tasks`)
         .then(res => res.data);
     },
-    getTasksByProject(projectId) {
+    byProject(projectId) {
       return $http.get(`${apiUrl}/tasks?projectId=${projectId}`)
         .then(res => res.data);
     },
-    getTasksByContext(contextId) {      
+    byContext(contextId) {      
       return $http.get(`${apiUrl}/tasks?contextId=${contextId}`)
         .then(res => res.data);
     },
-    getTaskById(taskId) {
+    byId(taskId) {
       return $http.get(`${apiUrl}/tasks/${taskId}`)
         .then(res => res.data);
     },
-    addTask(taskData) {
+    add(taskData) {
       return $http.post(`${apiUrl}/tasks`, taskData)
         .then(res => res.data);
     },
-    editTask(taskId, taskData) {
+    // "edit" typically describes actively changing, "update" means go update the db
+    update(taskId, taskData) {
       return $http.put(`${apiUrl}/tasks/${taskId}`, taskData)
         .then(res => res.data);
     },
-    deleteTask(taskId) {
+    delete(taskId) {
       return $http.delete(`${apiUrl}/tasks/${taskId}`)
         .then(res => res.data);
     }
