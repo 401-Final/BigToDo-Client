@@ -2,11 +2,7 @@ const request = require('request');
 const token = require('../src/services/token-service');
 
 describe('BigToDo App', () => {
-
-  // TODO: Set up to use the 'test' database
-
-  // TODO: Drop the db / collections before running tests
-
+  
   // TODO: Provide test user info
   beforeAll (() => {
     const options = {
