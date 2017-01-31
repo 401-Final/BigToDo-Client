@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
-    "test": "exit 0",
+    "test": "karma start",
     "test:watch": "karma start",
     "start": "webpack-dev-server --inline",
     "build": "webpack  --define process.env.APIURL='\"/api\"'",
