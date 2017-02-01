@@ -1,8 +1,7 @@
 const request = require('request');
-const token = require('../src/services/token-service');
 
 describe('BigToDo App', () => {
-  
+
   // TODO: Provide test user info
   beforeAll (() => {
     const options = {
@@ -10,9 +9,6 @@ describe('BigToDo App', () => {
       url: '/api/auth/signin',
       method: 'POST'
     };
-
-    let myToken = token.get();
-    console.log('myToken ', myToken);
   });
 
   it ('has a title', () => {

@@ -1,4 +1,4 @@
-describe ('userService test', () => {
+describe ('userService', () => {
 
   const { expect } = chai;
 
