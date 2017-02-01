@@ -85,4 +85,19 @@ describe ('contextsService', () => {
     $httpBackend.flush();
   });
 
+  it ('deletes a context', (done) => {
+    $httpBackend
+      .expectDELETE('/api/contexts/1')
+      .respond(200, addedContext);
+
+    contextsService.deleteContext(1)
+      .then((res) => {
+        expect(res).to.deep.equal(addedContext);
+        done();
+      })
+      .catch(done);
+
+    $httpBackend.flush();
+  });
+
 });
