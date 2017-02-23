@@ -1,6 +1,6 @@
 tokenService.$inject = ['$window'];
 
-const TOKEN_NAME = 'token';
+const TOKEN_NAME = 'BTDtoken';
 
 export default function tokenService($window) {
   return {
